@@ -1,0 +1,5 @@
+{
+  "name": "DogCRM - Gestão de Serviços Caninos",
+  "description": "CRM completo para serviços caninos: Treinos, Estadias, Creche e mais. Inclui frontend para divulgação e backend para gestão de equipa, calendário e pagamentos.",
+  "requestFramePermissions": []
+}
