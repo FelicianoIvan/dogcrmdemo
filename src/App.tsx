@@ -85,7 +85,7 @@ export default function App() {
               <div className="rounded-[1.5rem] overflow-hidden border border-slate-200 bg-slate-100">
                 <img
                   src="/image.png"
-                  alt="Exemplo real do frontend do dog-trainer-crm-starter em produção"
+                  alt="Exemplo real do frontend do Dog CRM em produção"
                   className="w-full h-auto object-cover object-top"
                 />
               </div>
@@ -129,7 +129,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Um site feito para vender os seus serviços</h2>
-            <p className="text-slate-600 text-lg">O frontend do dog-trainer-crm-starter ajuda a apresentar a oferta certa e encaminhar clientes para a marcação.</p>
+            <p className="text-slate-600 text-lg">O frontend do Dog CRM ajuda a apresentar a oferta certa e encaminhar clientes para a marcação.</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -162,7 +162,7 @@ export default function App() {
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Módulos IGP e operação diária</h2>
             <p className="text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed">
-              O dog-trainer-crm-starter junta a montra pública com a gestão interna, para que o trabalho do dia a dia não fique espalhado por folhas, mensagens e ferramentas separadas.
+              O Dog CRM junta a montra pública com a gestão interna, para que o trabalho do dia a dia não fique espalhado por folhas, mensagens e ferramentas separadas.
             </p>
           </div>
 
@@ -193,7 +193,7 @@ export default function App() {
             <div className="lg:w-1/2">
               <h2 className="text-4xl font-bold mb-6 text-slate-900">Controlo Total nos Bastidores</h2>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                Para além do site público, o dog-trainer-crm-starter inclui a base operacional para gerir o negócio canino com mais contexto, menos improviso e melhor acompanhamento.
+                Para além do site público, o Dog CRM inclui a base operacional para gerir o negócio canino com mais contexto, menos improviso e melhor acompanhamento.
               </p>
               
               <div className="space-y-6">
@@ -275,7 +275,7 @@ export default function App() {
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Pronto para elevar o seu negócio?</h2>
             <p className="text-primary-light mb-12 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-              Solicite uma demonstração do dog-trainer-crm-starter e veja como o site público, o CRM e os módulos especializados podem trabalhar juntos.
+              Solicite uma demonstração do Dog CRM e veja como o site público, o CRM e os módulos especializados podem trabalhar juntos.
             </p>
             
             <div className="flex flex-col gap-6 items-center">
@@ -316,7 +316,7 @@ export default function App() {
             <a href="https://dogcrm.xyz" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Demo Online</a>
           </div>
           <p className="text-slate-400 text-sm">
-            © {new Date().getFullYear()} DogCRM. Uma montra promocional do dog-trainer-crm-starter.
+            © {new Date().getFullYear()} DogCRM. Uma montra promocional do Dog CRM.
           </p>
         </div>
       </footer>
