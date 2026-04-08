@@ -59,20 +59,40 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <header className="px-6 py-20 md:py-32 max-w-7xl mx-auto text-center relative overflow-hidden">
+      <header className="px-6 py-20 md:py-24 max-w-7xl mx-auto relative overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+          className="text-center"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary-dark font-semibold text-sm mb-8 border border-primary/20">
             <Shield size={16} /> Solução Completa para Negócios Caninos
           </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-8 text-slate-900 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-8 text-slate-900 leading-tight max-w-5xl mx-auto">
             O CRM que entende o seu <br className="hidden md:block" />
             <span className="text-primary">negócio de quatro patas.</span>
           </h1>
-          <p className="text-xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="relative max-w-6xl mx-auto mt-10"
+          >
+            <div className="absolute -inset-8 bg-primary/10 rounded-[3rem] blur-3xl pointer-events-none" />
+            <div className="relative bg-white p-3 md:p-4 rounded-[2rem] shadow-2xl border border-primary/10">
+              <div className="rounded-[1.5rem] overflow-hidden border border-slate-200 bg-slate-100">
+                <img
+                  src="/image.png"
+                  alt="Exemplo real do frontend do dog-trainer-crm-starter em produção"
+                  className="w-full h-auto object-cover object-top"
+                />
+              </div>
+            </div>
+          </motion.div>
+
+          <p className="text-xl text-slate-600 mt-10 mb-10 max-w-4xl mx-auto leading-relaxed">
             Uma plataforma pensada para treinadores, escolas caninas e clubes que precisam de divulgar serviços, gerir marcações, organizar clientes e cães, acompanhar pagamentos e adaptar a experiência ao seu projeto, incluindo módulos mais técnicos como IGP e SAR.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -184,8 +204,8 @@ export default function App() {
                 />
                 <FeatureItem 
                   icon={<CreditCard className="text-primary" aria-hidden />}
-                  title="Pagamentos e Faturação"
-                  description="Registo de pagamentos e acompanhamento financeiro associado ao trabalho realizado."
+                  title="Pagamentos e acompanhamento"
+                  description="Registo de pagamentos e contexto financeiro associado a serviços, marcações e clientes."
                 />
                 <FeatureItem 
                   icon={<Users className="text-primary" aria-hidden />}
@@ -199,8 +219,13 @@ export default function App() {
                 />
                 <FeatureItem 
                   icon={<Search className="text-primary" aria-hidden />}
-                  title="Frontend administrável e módulos técnicos"
-                  description="Gestão de conteúdos do site e suporte a módulos especializados como IGP e SAR dentro da mesma plataforma."
+                  title="Menus e secções personalizáveis"
+                  description="Estrutura administrável para ajustar páginas, secções, conteúdos e navegação ao estilo de cada projeto."
+                />
+                <FeatureItem 
+                  icon={<Target className="text-primary" aria-hidden />}
+                  title="Módulos técnicos integrados"
+                  description="Suporte a contextos mais especializados como IGP e SAR dentro da mesma plataforma."
                 />
               </div>
             </div>
