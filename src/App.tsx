@@ -19,6 +19,7 @@ import {
   Archive,
   CalendarCheck2,
   Target,
+  Check,
 } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -47,6 +48,7 @@ export default function App() {
             <a href="#services" className="hover:text-primary transition-colors">Serviços</a>
             <a href="#modules" className="hover:text-primary transition-colors">Módulos</a>
             <a href="#features" className="hover:text-primary transition-colors">Gestão</a>
+            <a href="#pricing" className="hover:text-primary transition-colors">Preços</a>
             <a href="#demo" className="hover:text-primary transition-colors">Demonstração</a>
           </div>
           <a 
@@ -261,6 +263,61 @@ export default function App() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section id="pricing" className="py-24 px-6 bg-beige-bg/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900">Planos Adaptados ao seu Negócio</h2>
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+              Escolha a solução que melhor se adapta à fase atual da sua escola ou centro de treino canino.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <PricingCard 
+              title="Solução Frontend"
+              price="30"
+              description="A montra perfeita para atrair novos clientes e profissionalizar a sua presença online."
+              features={[
+                "Website profissional personalizado",
+                "Páginas de serviços e aulas",
+                "Formulários de contacto direto",
+                "Otimização SEO base",
+                "Alojamento incluído",
+                "Suporte técnico"
+              ]}
+            />
+            <PricingCard 
+              title="Frontend + Backend"
+              price="35"
+              highlighted={true}
+              description="Gestão centralizada para quem precisa de organizar o fluxo de clientes e o histórico dos cães."
+              features={[
+                "Tudo do plano Frontend",
+                "CRM completo de clientes",
+                "Base de dados de cães e fotos",
+                "Registo de pagamentos",
+                "Histórico de treinos e notas",
+                "Gestão de equipa e permissões"
+              ]}
+            />
+            <PricingCard 
+              title="Gestão + Marcações"
+              price="40"
+              description="A solução total com agenda inteligente e módulos técnicos para centros de alto rendimento."
+              features={[
+                "Tudo do plano Frontend + Backend",
+                "Agenda inteligente de marcações",
+                "Controlo de aulas de grupo e individuais",
+                "Módulos técnicos IGP e SAR",
+                "Calendário operacional de equipa",
+                "Relatórios de atividade"
+              ]}
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Demo Section */}
       <section id="demo" className="py-24 px-6 max-w-5xl mx-auto">
         <motion.div 
@@ -313,6 +370,7 @@ export default function App() {
             <a href="#services" className="hover:text-primary transition-colors">Serviços</a>
             <a href="#modules" className="hover:text-primary transition-colors">Módulos</a>
             <a href="#features" className="hover:text-primary transition-colors">Gestão</a>
+            <a href="#pricing" className="hover:text-primary transition-colors">Preços</a>
             <a href="https://dogcrm.xyz" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Demo Online</a>
           </div>
           <p className="text-slate-400 text-sm">
@@ -352,5 +410,70 @@ function FeatureItem({ icon, title, description }: { icon: React.ReactNode, titl
         <p className="text-slate-600 leading-relaxed">{description}</p>
       </div>
     </div>
+  );
+}
+
+function PricingCard({ 
+  title, 
+  price, 
+  description, 
+  features, 
+  highlighted = false 
+}: { 
+  title: string, 
+  price: string, 
+  description: string, 
+  features: string[],
+  highlighted?: boolean
+}) {
+  return (
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className={`relative p-8 rounded-[2.5rem] border ${
+        highlighted 
+          ? 'bg-white border-primary shadow-2xl shadow-primary/10 scale-105 z-10' 
+          : 'bg-white/50 border-primary/10 hover:bg-white hover:border-primary/20 transition-all'
+      }`}
+    >
+      {highlighted && (
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm font-bold tracking-wide">
+          MAIS POPULAR
+        </div>
+      )}
+      <div className="mb-8">
+        <h3 className="text-xl font-bold text-slate-900 mb-2">{title}</h3>
+        <div className="flex items-baseline gap-1">
+          <span className="text-4xl font-extrabold text-slate-900">{price}€</span>
+          <span className="text-slate-500 font-medium">/mês</span>
+        </div>
+        <p className="mt-4 text-slate-600 leading-relaxed text-sm">
+          {description}
+        </p>
+      </div>
+      
+      <ul className="space-y-4 mb-10">
+        {features.map((feature, idx) => (
+          <li key={idx} className="flex gap-3 text-sm text-slate-700 items-start">
+            <div className="bg-primary/10 p-0.5 rounded-full mt-0.5">
+              <Check size={14} className="text-primary-dark" />
+            </div>
+            {feature}
+          </li>
+        ))}
+      </ul>
+
+      <a 
+        href="#demo"
+        className={`block w-full py-4 rounded-2xl text-center font-bold transition-all ${
+          highlighted 
+            ? 'bg-primary text-white hover:bg-primary-dark shadow-lg shadow-primary/20' 
+            : 'bg-slate-100 text-slate-900 hover:bg-slate-200'
+        }`}
+      >
+        Começar Agora
+      </a>
+    </motion.div>
   );
 }
