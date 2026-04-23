@@ -84,7 +84,7 @@ export default function App() {
             <div className="relative bg-white p-3 md:p-4 rounded-[2rem] shadow-2xl border border-primary/10">
               <div className="rounded-[1.5rem] overflow-hidden border border-slate-200 bg-slate-100">
                 <img
-                  src="/image.png"
+                  src="/image.jpeg"
                   alt="Exemplo real do frontend do Dog CRM em produção"
                   className="w-full h-auto object-cover object-top"
                 />
